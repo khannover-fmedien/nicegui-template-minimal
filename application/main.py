@@ -6,7 +6,7 @@ def main_page():
     ui.label('Hello, NiceGUI!')
 
 
-port = 8080
+port = os.environ.get("NICEGUI_PORT", "8080")
 ui.run(
         port=int(port),
         show=False,
